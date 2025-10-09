@@ -1,17 +1,30 @@
 export const languages = {
   es: "Español",
   en: "English",
-};
+} as const;
 
 export const defaultLang = "es";
 
+export const site = {
+  user: "Mario Abreu",
+  locale: "es-MX",
+  url: "https://mabreumx.mx",
+  image: "https://mabreumx.com/og-image.png",
+} as const;
+
 export const ui = {
   es: {
+    "user.role": "Desarrollador Frontend",
+    "user.service": "Desarrollo Web Frontend",
+    "site.title": "Desarrollador Frontend",
+    "site.description":
+      "Soy Mario, desarrollador web frontend. Diseño y construyo sitios y aplicaciones modernas, ligeras y con propósito.",
+    "site.keywords":
+      "desarrollo web,frontend,javascript,html,css,framewoks,svelte,react,inertia,astro,tailwindcss,alpinejs,programador,web developer,sitios web,landing pages,freelance,diseño web,mantenimiento web,maquetación",
     "nav.home": "Inicio",
     "nav.about": "Acerca de",
     "nav.projects": "Proyectos",
     "nav.contact": "Contacto",
-    "user.role": "Desarrollador Frontend",
     "home.description":
       "Apasionado por crear soluciones innovadoras y eficientes que impulsen el éxito empresarial.",
     "home.cta": "Ver Proyectos",

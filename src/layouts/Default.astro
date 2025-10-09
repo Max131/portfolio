@@ -4,21 +4,96 @@ interface Props {
 }
 
 import "../styles/global.css";
+import { useTranslation, defaultLang } from "@i18n/utils.ts";
+import { site } from "@i18n/ui.ts";
 
+const currentLang = Astro.currentLocale || defaultLang;
+const t = useTranslation(currentLang);
 const { title = "" } = Astro.props;
+
+const jsonLdPersona = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": `${site.user}`,
+  "jobTitle": "Desarrollador Web Frontend",
+  "description": "Soy Mario, desarrollador web frontend. Diseño y construyo sitios y aplicaciones modernas, ligeras y con propósito.",
+  "url": "https://tusitio.com/",
+  "image": "https://tusitio.com/imagen-perfil.svg",
+  "sameAs": [
+    "https://github.com/tusitio",
+    "https://www.linkedin.com/in/tusitio"
+  ],
+  "knowsAbout": [
+    "Frontend",
+    "Svelte",
+    "Laravel",
+    "Inertia",
+    "Astro",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "UX"
+  ],
+  "brand": {
+    "@type": "Organization",
+    "name": "Mario - Desarrollo Web",
+    "url": "https://tusitio.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebSite",
+    "url": "https://tusitio.com/"
+  }
+}
+
+const jsonLdService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": `${t("user.service")}`,
+  "provider": {
+    "@type": "Person",
+    "name": `${site.user}`
+  },
+  "description": `${t("site.description")}`,
+  "areaServed": "Latinoamérica",
+  "url": `${site.url}`
+}
 ---
 
 <html lang={Astro.currentLocale}>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
     <title>{title ? `${title} - Mario Abreu` : "Mario Abreu"}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content={site.user} />
+    <meta name="description" content={t("site.description")} />
+    <meta name="keywords" content={t("site.keywords")} />
+    <meta name="theme-color" content="#663399" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${t("user.role")} - ${site.user}`} />
+    <meta property="og:description" content={t("site.description")} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={site.url} />
+    <meta property="og:image" content={site.image} />
+    <meta property="og:locale" content={site.locale} />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={site.title} />
+    <meta name="twitter:description" content={site.description} />
+    <meta name="twitter:image" content={site.image} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={site.url} />
+
+    <!-- JSON-LD: Persona -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdPersona)}> </script>
+
+    <!-- JSON-LD: Servicio -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdService)}></script>
   </head>
   <body>
-    <div class="max-w-7xl mx-auto p-4">
+    <main class="max-w-7xl mx-auto p-4 xl:p-0">
       <slot />
-    </div>
+    </main>
   </body>
 </html>

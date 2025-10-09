@@ -5,7 +5,7 @@ import { useTranslation } from "@i18n/utils.ts";
 const t = useTranslation(Astro.currentLocale);
 ---
 
-<Layout title="Frontend Developer">
+<Layout title={t("user.role")}>
 	<h1 class="font-title text-2xl">Mario Abreu - {t("user.role")}</h1>
 	<p class="text-lg">
 		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, illo!
