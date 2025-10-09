@@ -1,9 +1,12 @@
 ---
 import Layout from "@layouts/Default.astro";
+import { useTranslation } from "@i18n/utils.ts";
+
+const t = useTranslation(Astro.currentLocale);
 ---
 
 <Layout title="Frontend Developer">
-	<h1 class="font-title text-2xl">Mario Abreu - Frontend Developer</h1>
+	<h1 class="font-title text-2xl">Mario Abreu - {t("user.role")}</h1>
 	<p class="text-lg">
 		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, illo!
 	</p>
