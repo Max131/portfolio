@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Default.astro";
-import { site } from "@i18n/ui.ts";
+import { site, contactItems } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
 
 const t = useTranslation(Astro.currentLocale);
@@ -20,8 +20,33 @@ const t = useTranslation(Astro.currentLocale);
 			<div class="text-lg" set:html={t("hero.content")} />
 		</div>
 	</section>
-	<section id="about">
+
+	<section class="mb-12" id="about">
 		<h2 class="font-title font-bold text-2xl">{t("about.title")}</h2>
 		<div class="text-lg *:mb-4" set:html={t("about.content")} />
+	</section>
+
+	<section id="contact" class="mb-12">
+		<h2 class="font-title font-bold text-2xl">{t("contact.title")}</h2>
+		<div class="text-lg" set:html={t("contact.content")} />
+		<ul class="mt-4 space-y-2">
+			{
+				contactItems.map((item) => (
+					<li>
+						<a
+							class="inline-flex gap-1 items-base text-green-700"
+							href={item.link}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<span>
+								<item.icon />
+							</span>
+							<span class="font-medium text-xl">{item.name}</span>
+						</a>
+					</li>
+				))
+			}
+		</ul>
 	</section>
 </Layout>
