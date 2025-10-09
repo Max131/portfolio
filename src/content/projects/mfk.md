@@ -5,6 +5,7 @@ summary: "Explore the life and art of Frida Kahlo at the Museo Frida Kahlo in Me
 categories: ["Museums", "Mexico City"]
 tags: ["Frida Kahlo", "Art", "Culture"]
 images: ["https://example.com/frida-kahlo-museum.jpg"]
+dirimages: "mfk"
 link: "https://www.museofridakahlo.org.mx/"
 ---
 
