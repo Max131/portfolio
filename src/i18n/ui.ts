@@ -9,7 +9,7 @@ export const site = {
   user: "Mario Abreu",
   locale: "es-MX",
   url: "https://mabreumx.mx",
-  image: "https://mabreumx.com/og-image.png",
+  image: "/og-image.jpg",
 } as const;
 
 export const ui = {
