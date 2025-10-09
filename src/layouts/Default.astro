@@ -4,7 +4,8 @@ interface Props {
 }
 
 import "../styles/global.css";
-import { useTranslation, defaultLang } from "@i18n/utils.ts";
+import { useTranslation } from "@i18n/utils.ts";
+import { defaultLang } from "@i18n/ui.ts";
 import { site } from "@i18n/ui.ts";
 
 const currentLang = Astro.currentLocale || defaultLang;
