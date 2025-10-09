@@ -1,13 +1,27 @@
 ---
 import Layout from "@layouts/Default.astro";
+import { site } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
 
 const t = useTranslation(Astro.currentLocale);
 ---
 
 <Layout title={t("user.role")}>
-	<h1 class="font-title text-2xl">Mario Abreu - {t("user.role")}</h1>
-	<p class="text-lg">
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, illo!
-	</p>
+	<section class="my-12" id="hero">
+		<div class="">
+			<h1 class="font-title font-bold">
+				<span class="text-3xl text-stone-500">
+					{site.user}<br />
+				</span>
+				<span class="text-4xl">
+					{t("user.role")}
+				</span>
+			</h1>
+			<div class="text-lg" set:html={t("hero.content")} />
+		</div>
+	</section>
+	<section id="about">
+		<h2 class="font-title font-bold text-2xl">{t("about.title")}</h2>
+		<div class="text-lg *:mb-4" set:html={t("about.content")} />
+	</section>
 </Layout>

@@ -25,18 +25,12 @@ export const ui = {
     "nav.about": "Acerca de",
     "nav.projects": "Proyectos",
     "nav.contact": "Contacto",
-    "home.description":
-      "Apasionado por crear soluciones innovadoras y eficientes que impulsen el éxito empresarial.",
-    "home.cta": "Ver Proyectos",
-    "about.title": "Acerca de mí",
-    "about.description":
-      "Soy un desarrollador Frontend con experiencia en la creación de sitios web. Me especializo en tecnologías como JavaScript, React, Node.js y bases de datos SQL y NoSQL. Me encanta aprender nuevas tecnologías y enfrentar desafíos técnicos.",
+    "hero.content":
+      "<p>Las buenas ideas merecen una presencia digital a su altura.</p><p>Soy <strong>Mario</strong>, desarrollador web frontend, y ayudo a construir proyectos que <strong>inspiran confianza, comunican con claridad y crecen con propósito</strong>.",
+    "about.title": "Sobre mí",
+    "about.content":
+      "<p>Hola, soy <strong>Mario</strong>, desarrollador web frontend enfocado en crear experiencias digitales claras, funcionales y con identidad propia. Mi objetivo es transformar ideas en sitios y aplicaciones <strong>ligeras, escalables y fáciles de mantener</strong>, pensados para crecer contigo.</p><p>Trabajo con tecnologías modernas como <strong>Svelte, Inertia, Astro y AlpineJS</strong>, buscando siempre equilibrio entre <strong>estética, rendimiento y simplicidad</strong>. He colaborado con <strong>profesionales independientes, negocios locales y proyectos creativos</strong>, ayudándolos a fortalecer su presencia digital sin complicaciones técnicas innecesarias.</p><p> Creo en la cercanía, la claridad y la confianza como pilares de cada desarrollo. Más que líneas de código, construyo herramientas que cuentan historias y reflejan la esencia de quienes las imaginan.</p>",
     "projects.title": "Proyectos",
-    "projects.description":
-      "Aquí hay algunos de mis proyectos recientes. Haga clic en cada uno para obtener más detalles.",
-    "contact.title": "Contacto",
-    "contact.description":
-      "¿Interesado en trabajar juntos? No dude en ponerse en contacto conmigo a través del siguiente formulario.",
   },
   en: {
     "nav.home": "Home",
