@@ -4,10 +4,10 @@ date: "2025-10-03"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
-thumbnail: "mfk.webp"
+thumbnail: "terranova.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "mfk"
-link: "https://www.museofridakahlo.org.mx/"
+link: "https://terranovatenis.netlify.app/"
 ---
 
 El Museo Frida Kahlo, también conocido como la Casa Azul (La Casa Azul), es un
