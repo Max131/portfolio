@@ -1,6 +1,6 @@
 ---
-title: "Museo Frida Kahlo"
-date: "2023-05-10"
+title: "Fundación ICA"
+date: "2025-01-23"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]

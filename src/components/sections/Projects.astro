@@ -14,37 +14,41 @@ const t = useTranslation(currentLocale);
   <div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
   <div class="grid grid-cols-3 gap-4 my-8">
     {
-      (
-        await getCollection("projects", ({ data: { featured } }) => featured)
-      ).map((project) => (
-        <article class="mb-6 rounded-xl shadow p-2">
-          <Image
-            class="rounded mb-4 aspect-video object-cover"
-            src={`/images/projects/${project.data.thumbnail}`}
-            width={320}
-            height={180}
-            alt={project.data.title}
-          />
-          <h3 class="font-title font-semibold text-xl mb-1">
-            <a
-              class="text-amber-500 hover:underline"
-              href={project.data.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {project.data.title}
-            </a>
-          </h3>
-          <p class="leading-tight">{project.data.summary}</p>
-          <ul class="my-4">
-            {project.data.tags?.map((tag) => (
-              <li class="inline-block bg-stone-200 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </article>
-      ))
+      (await getCollection("projects", ({ data: { featured } }) => featured))
+        .sort((a, b) => {
+          return (
+            new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+          );
+        })
+        .map((project) => (
+          <article class="mb-6 rounded-xl shadow p-2">
+            <Image
+              class="rounded mb-4 aspect-video object-cover"
+              src={`/images/projects/${project.data.thumbnail}`}
+              width={320}
+              height={180}
+              alt={project.data.title}
+            />
+            <h3 class="font-title font-semibold text-xl mb-1">
+              <a
+                class="text-amber-500 hover:underline"
+                href={project.data.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.data.title}
+              </a>
+            </h3>
+            <p class="leading-tight">{project.data.summary}</p>
+            <ul class="my-4">
+              {project.data.tags?.map((tag) => (
+                <li class="inline-block bg-stone-200 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
     }
   </div>
 </section>
