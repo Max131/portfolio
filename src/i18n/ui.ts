@@ -16,8 +16,8 @@ export const defaultLang = "es";
 export const site = {
   user: "Mario Abreu",
   locale: "es-MX",
-  url: "https://mabreumx.mx",
-  image: "/og-image.jpg",
+  url: "https://mabreumx.com",
+  image: "https://mabreumx.com/og-image.jpg",
 } as const;
 
 export const contactItems: Contact[] = [
