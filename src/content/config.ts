@@ -14,6 +14,7 @@ const projectsCollection = defineCollection({
       images: z.array(z.string()).optional(),
       dirimages: z.string().optional(),
       video: z.string().optional(),
+      featured: z.boolean().default(false),
     })
     .refine((data) => {
       return !data.images?.length || data.dirimages;
