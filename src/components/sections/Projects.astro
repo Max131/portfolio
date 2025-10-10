@@ -12,13 +12,22 @@ const t = useTranslation(currentLocale);
 <section id="projects" class="mb-12">
   <h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
   <div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
-  {
-    (await getCollection("projects", ({ data: { featured } }) => featured)).map(
-      (project) => (
+  <div class="grid grid-cols-3 gap-4 my-12">
+    {
+      (
+        await getCollection("projects", ({ data: { featured } }) => featured)
+      ).map((project) => (
         <article class="mb-6">
-          <h3 class="font-semibold text-xl mb-1">
+          <Image
+            class="rounded-xl mb-4 aspect-video object-cover"
+            src={project.data.images[0]}
+            width={640}
+            height={480}
+            alt={project.data.title}
+          />
+          <h3 class="font-title font-semibold text-xl mb-1">
             <a
-              class="text-blue-500 hover:underline"
+              class="text-amber-500 hover:underline"
               href={project.data.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -26,9 +35,16 @@ const t = useTranslation(currentLocale);
               {project.data.title}
             </a>
           </h3>
-          <p class="text-lg">{project.data.summary}</p>
+          <p class="leading-tight">{project.data.summary}</p>
+          <ul class="my-4">
+            {project.data.tags?.map((tag) => (
+              <li class="inline-block bg-stone-200 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                {tag}
+              </li>
+            ))}
+          </ul>
         </article>
-      ),
-    )
-  }
+      ))
+    }
+  </div>
 </section>
