@@ -1,9 +1,10 @@
 ---
 import Layout from "@layouts/Default.astro";
-import { site, contactItems } from "@i18n/ui.ts";
+import { defaultLang, site, contactItems } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
 
-const t = useTranslation(Astro.currentLocale);
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslation(currentLocale);
 ---
 
 <Layout title={t("user.role")}>
