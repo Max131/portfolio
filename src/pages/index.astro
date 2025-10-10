@@ -2,7 +2,8 @@
 import Layout from "@layouts/Default.astro";
 import { defaultLang, site, contactItems } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import Projects from "@components/sections/Projects.astro";
 
 const currentLocale = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLocale);
@@ -10,68 +11,45 @@ const t = useTranslation(currentLocale);
 
 <Layout title={t("user.role")}>
 	<section class="mb-12" id="hero">
-		<div>
-			<h1 class="font-title font-bold bg-neutral-800 -mx-8 -mt-6 px-8 py-4">
-				<span class="text-3xl text-yellow-400">
-					{site.user}<br />
-				</span>
-				<span class="text-4xl text-cyan-400">
-					{t("user.role")}
-				</span>
-			</h1>
-			<div class="text-lg pt-6 italic" set:html={t("hero.content")} />
-		</div>
+		<h1 class="font-title font-bold bg-neutral-800 -mx-8 -mt-6 px-8 py-4">
+			<span class="text-3xl text-yellow-400">
+				{site.user}<br />
+			</span>
+			<span class="text-4xl text-cyan-400">
+				{t("user.role")}
+			</span>
+		</h1>
+		<div class="text-lg pt-6 italic" set:html={t("hero.content")} />
 	</section>
 
-	<section id="projects" class="mb-12">
-		<h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
-		<div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
+	<Projects />
+
+	<section class="mb-12" id="about">
+		<h2 class="font-title font-bold mb-1 text-2xl">{t("about.title")}</h2>
+		<div class="text-lg *:[p]:mb-4" set:html={t("about.content")} />
+	</section>
+
+	<section id="contact" class="mb-12">
+		<h2 class="font-title font-bold mb-1 text-2xl">{t("contact.title")}</h2>
+		<div class="text-lg *:[p]:mb-4" set:html={t("contact.content")} />
 		<ul class="mt-4 space-y-2">
 			{
-				(
-					await getCollection("projects", ({ data: { featured } }) => featured)
-				).map((project) => (
+				contactItems.map((item) => (
 					<li>
 						<a
-							class="inline-flex gap-1 items-base text-blue-500"
-							href={project.data.link}
+							class="inline-flex gap-1 items-base text-blue-600"
+							href={item.link}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<span class="font-medium text-xl">{project.data.title}</span>
+							<span>
+								<item.icon />
+							</span>
+							<span class="font-medium text-xl">{item.name}</span>
 						</a>
 					</li>
 				))
 			}
 		</ul>
-
-		<section class="mb-12" id="about">
-			<h2 class="font-title font-bold mb-1 text-2xl">{t("about.title")}</h2>
-			<div class="text-lg *:[p]:mb-4" set:html={t("about.content")} />
-		</section>
-
-		<section id="contact" class="mb-12">
-			<h2 class="font-title font-bold mb-1 text-2xl">{t("contact.title")}</h2>
-			<div class="text-lg *:[p]:mb-4" set:html={t("contact.content")} />
-			<ul class="mt-4 space-y-2">
-				{
-					contactItems.map((item) => (
-						<li>
-							<a
-								class="inline-flex gap-1 items-base text-blue-500"
-								href={item.link}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<span>
-									<item.icon />
-								</span>
-								<span class="font-medium text-xl">{item.name}</span>
-							</a>
-						</li>
-					))
-				}
-			</ul>
-		</section>
 	</section>
 </Layout>

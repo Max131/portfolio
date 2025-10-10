@@ -4,7 +4,7 @@ date: "2024-06-20"
 summary: "Explore the life and art of Frida Kahlo at the Museo Frida Kahlo in Mexico City."
 categories: ["Museums", "Mexico City"]
 tags: ["Frida Kahlo", "Art", "Culture"]
-images: ["https://example.com/frida-kahlo-museum.jpg"]
+images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "mfk"
 featured: true
 link: "https://www.museofridakahlo.org.mx/"
