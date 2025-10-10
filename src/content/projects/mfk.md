@@ -6,6 +6,7 @@ categories: ["Museums", "Mexico City"]
 tags: ["Frida Kahlo", "Art", "Culture"]
 images: ["https://example.com/frida-kahlo-museum.jpg"]
 dirimages: "mfk"
+featured: true
 link: "https://www.museofridakahlo.org.mx/"
 ---
 

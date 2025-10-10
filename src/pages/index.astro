@@ -2,6 +2,7 @@
 import Layout from "@layouts/Default.astro";
 import { defaultLang, site, contactItems } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
+import { getCollection, getEntry } from "astro:content";
 
 const currentLocale = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLocale);
@@ -25,34 +26,52 @@ const t = useTranslation(currentLocale);
 	<section id="projects" class="mb-12">
 		<h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
 		<div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
-	</section>
-
-	<section class="mb-12" id="about">
-		<h2 class="font-title font-bold mb-1 text-2xl">{t("about.title")}</h2>
-		<div class="text-lg *:[p]:mb-4" set:html={t("about.content")} />
-	</section>
-
-	<section id="contact" class="mb-12">
-		<h2 class="font-title font-bold mb-1 text-2xl">{t("contact.title")}</h2>
-		<div class="text-lg *:[p]:mb-4" set:html={t("contact.content")} />
 		<ul class="mt-4 space-y-2">
 			{
-				contactItems.map((item) => (
+				(
+					await getCollection("projects", ({ data: { featured } }) => featured)
+				).map((project) => (
 					<li>
 						<a
 							class="inline-flex gap-1 items-base text-blue-500"
-							href={item.link}
+							href={project.data.link}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<span>
-								<item.icon />
-							</span>
-							<span class="font-medium text-xl">{item.name}</span>
+							<span class="font-medium text-xl">{project.data.title}</span>
 						</a>
 					</li>
 				))
 			}
 		</ul>
+
+		<section class="mb-12" id="about">
+			<h2 class="font-title font-bold mb-1 text-2xl">{t("about.title")}</h2>
+			<div class="text-lg *:[p]:mb-4" set:html={t("about.content")} />
+		</section>
+
+		<section id="contact" class="mb-12">
+			<h2 class="font-title font-bold mb-1 text-2xl">{t("contact.title")}</h2>
+			<div class="text-lg *:[p]:mb-4" set:html={t("contact.content")} />
+			<ul class="mt-4 space-y-2">
+				{
+					contactItems.map((item) => (
+						<li>
+							<a
+								class="inline-flex gap-1 items-base text-blue-500"
+								href={item.link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<span>
+									<item.icon />
+								</span>
+								<span class="font-medium text-xl">{item.name}</span>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</section>
 	</section>
 </Layout>
