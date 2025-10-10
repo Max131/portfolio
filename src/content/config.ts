@@ -11,6 +11,7 @@ const projectsCollection = defineCollection({
       date: z.string().refine((date) => !isNaN(Date.parse(date)), {
         message: "Invalid date format",
       }),
+      thumbnail: z.string().optional(),
       images: z.array(z.string()).optional(),
       dirimages: z.string().optional(),
       video: z.string().optional(),

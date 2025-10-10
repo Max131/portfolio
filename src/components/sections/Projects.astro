@@ -12,21 +12,17 @@ const t = useTranslation(currentLocale);
 <section id="projects" class="mb-12">
   <h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
   <div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
-  <div class="grid grid-cols-3 gap-4 my-12">
+  <div class="grid grid-cols-3 gap-4 my-8">
     {
       (
         await getCollection("projects", ({ data: { featured } }) => featured)
       ).map((project) => (
-        <article class="mb-6">
+        <article class="mb-6 rounded-xl shadow p-2">
           <Image
-            class="rounded-xl mb-4 aspect-video object-cover"
-            src={
-              isURL(project.data.images?.[0])
-                ? project.data.images[0]
-                : `/images/projects/${project.data.images[0]}`
-            }
-            width={640}
-            height={480}
+            class="rounded mb-4 aspect-video object-cover"
+            src={`/images/projects/${project.data.thumbnail}`}
+            width={320}
+            height={180}
             alt={project.data.title}
           />
           <h3 class="font-title font-semibold text-xl mb-1">

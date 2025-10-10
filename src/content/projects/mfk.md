@@ -4,6 +4,7 @@ date: "2024-06-20"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
+thumbnail: "mfk.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "mfk"
 featured: true
