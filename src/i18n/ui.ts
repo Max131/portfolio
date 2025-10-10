@@ -1,4 +1,5 @@
 import { Linkedin, type Icon as IconType } from "@lucide/astro";
+const url = "https://mabreu.netlify.app";
 
 type Contact = {
   name: string;
@@ -16,8 +17,8 @@ export const defaultLang = "es";
 export const site = {
   user: "Mario Abreu",
   locale: "es-MX",
-  url: "https://mabreumx.com",
-  image: "https://mabreumx.com/og-image.jpg",
+  url,
+  image: `${url}/og-image.jpg`,
 } as const;
 
 export const contactItems: Contact[] = [
