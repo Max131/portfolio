@@ -12,7 +12,7 @@ const t = useTranslation(currentLocale);
 <section id="projects" class="mb-12">
   <h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
   <div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
-  <div class="grid grid-cols-3 gap-4 my-8">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
     {
       (await getCollection("projects", ({ data: { featured } }) => featured))
         .sort((a, b) => {
@@ -21,12 +21,12 @@ const t = useTranslation(currentLocale);
           );
         })
         .map((project) => (
-          <article class="mb-6 rounded-xl shadow p-2">
+          <article class="mb-6 rounded-xl shadow p-2 flex flex-col">
             <Image
-              class="rounded mb-4 aspect-video object-cover"
+              class="w-full rounded mb-4 aspect-video object-cover"
               src={`/images/projects/${project.data.thumbnail}`}
-              width={320}
-              height={180}
+              width={480}
+              height={270}
               alt={project.data.title}
             />
             <h3 class="font-title font-semibold text-xl mb-1">
@@ -40,7 +40,7 @@ const t = useTranslation(currentLocale);
               </a>
             </h3>
             <p class="leading-tight">{project.data.summary}</p>
-            <ul class="my-4">
+            <ul class="mt-auto py-4">
               {project.data.tags?.map((tag) => (
                 <li class="inline-block bg-stone-200 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
                   {tag}
