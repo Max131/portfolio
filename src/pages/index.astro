@@ -8,27 +8,32 @@ const t = useTranslation(Astro.currentLocale);
 
 <Layout title={t("user.role")}>
 	<section class="mb-12" id="hero">
-		<div class="">
-			<h1 class="font-title font-bold">
-				<span class="text-3xl text-stone-500">
+		<div>
+			<h1 class="font-title font-bold bg-neutral-800 -mx-8 -mt-6 px-8 py-4">
+				<span class="text-3xl text-yellow-400">
 					{site.user}<br />
 				</span>
-				<span class="text-4xl">
+				<span class="text-4xl text-cyan-400">
 					{t("user.role")}
 				</span>
 			</h1>
-			<div class="text-lg" set:html={t("hero.content")} />
+			<div class="text-lg pt-6" set:html={t("hero.content")} />
 		</div>
 	</section>
 
+	<section id="projects" class="mb-12">
+		<h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
+		<div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
+	</section>
+
 	<section class="mb-12" id="about">
-		<h2 class="font-title font-bold text-2xl">{t("about.title")}</h2>
-		<div class="text-lg *:mb-4" set:html={t("about.content")} />
+		<h2 class="font-title font-bold mb-1 text-2xl">{t("about.title")}</h2>
+		<div class="text-lg *:[p]:mb-4" set:html={t("about.content")} />
 	</section>
 
 	<section id="contact" class="mb-12">
-		<h2 class="font-title font-bold text-2xl">{t("contact.title")}</h2>
-		<div class="text-lg" set:html={t("contact.content")} />
+		<h2 class="font-title font-bold mb-1 text-2xl">{t("contact.title")}</h2>
+		<div class="text-lg *:[p]:mb-4" set:html={t("contact.content")} />
 		<ul class="mt-4 space-y-2">
 			{
 				contactItems.map((item) => (
