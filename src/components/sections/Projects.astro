@@ -20,7 +20,11 @@ const t = useTranslation(currentLocale);
         <article class="mb-6">
           <Image
             class="rounded-xl mb-4 aspect-video object-cover"
-            src={project.data.images[0]}
+            src={
+              isURL(project.data.images?.[0])
+                ? project.data.images[0]
+                : `/images/projects/${project.data.images[0]}`
+            }
             width={640}
             height={480}
             alt={project.data.title}
