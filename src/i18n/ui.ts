@@ -47,6 +47,7 @@ export const ui = {
     "projects.title": "Proyectos",
     "projects.content":
       "<p>A lo largo de mi carrera, he tenido la oportunidad de colaborar en una variedad de proyectos que reflejan mi pasión por el desarrollo web frontend. Desde sitios web corporativos hasta aplicaciones interactivas, cada proyecto ha sido una oportunidad para aprender y crecer.</p><p>Te invito a explorar algunos de mis trabajos destacados, donde podrás ver cómo combino diseño, funcionalidad y rendimiento para crear experiencias digitales únicas.</p>",
+    "projects.seeMore": "Ver más proyectos",
     "about.title": "Sobre mí",
     "about.content":
       "<p>Hola, soy <strong>Mario</strong>, desarrollador web frontend enfocado en crear experiencias digitales claras, funcionales y con identidad propia. Mi objetivo es transformar ideas en sitios y aplicaciones <strong>ligeras, escalables y fáciles de mantener</strong>, pensados para crecer contigo.</p><p>Trabajo con tecnologías modernas como <strong>Svelte, Inertia, Astro y AlpineJS</strong>, buscando siempre equilibrio entre <strong>estética, rendimiento y simplicidad</strong>. He colaborado con <strong>profesionales independientes, negocios locales y proyectos creativos</strong>, ayudándolos a fortalecer su presencia digital sin complicaciones técnicas innecesarias.</p><p> Creo en la cercanía, la claridad y la confianza como pilares de cada desarrollo. Más que líneas de código, construyo herramientas que cuentan historias y reflejan la esencia de quienes las imaginan.</p>",

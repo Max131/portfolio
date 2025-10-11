@@ -42,7 +42,7 @@ const t = useTranslation(currentLocale);
             <p class="leading-tight">{project.data.summary}</p>
             <ul class="mt-auto py-4">
               {project.data.tags?.map((tag) => (
-                <li class="inline-block bg-stone-200 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                <li class="inline-block bg-stone-100 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
                   {tag}
                 </li>
               ))}
@@ -50,5 +50,16 @@ const t = useTranslation(currentLocale);
           </article>
         ))
     }
+
+    <article class="mb-6 rounded-xl shadow p-2 grid place-items-center">
+      <a
+        href="#!"
+        class="text-7xl font-bold text-stone-400 hover:text-stone-600 transition"
+        aria-label={t("projects.seeMore")}
+        title={t("projects.seeMore")}
+      >
+        +
+      </a>
+    </article>
   </div>
 </section>
