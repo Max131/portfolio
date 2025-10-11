@@ -1,6 +1,6 @@
 ---
 title: "Cibanco"
-date: "2025-08-22"
+date: "2025-09-23"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]

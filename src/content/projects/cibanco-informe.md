@@ -1,6 +1,6 @@
 ---
 title: "Cibanco Informe Interno"
-date: "2025-09-28"
+date: "2025-10-01"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["astro", "tailwindcss", "gsap", "countupjs"]

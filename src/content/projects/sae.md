@@ -1,6 +1,6 @@
 ---
 title: "SAE Institute México"
-date: "2024-12-12"
+date: "2024-11-27"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]

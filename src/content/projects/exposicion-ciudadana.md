@@ -1,6 +1,6 @@
 ---
 title: "Exposición Ciudadana"
-date: "2022-06-20"
+date: "2022-10-18"
 summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
