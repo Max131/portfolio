@@ -17,7 +17,7 @@
 - **Functions**: Arrow functions preferred, JSDoc comments for documentation
 - **Types**: Strict typing required, use interfaces for complex objects
 - **Error handling**: try/catch blocks, no throwing in production code
-- **Formatting**: 2-space indentation, single quotes, no semicolons
+- **Formatting**: 2-space indentation, double quotes, semicolons
 - **Styling**: Tailwind CSS with custom font variables (--font-sans, --font-title)
 - **Components**: Astro components with frontmatter for logic
 - **Content**: Use Astro content collections for structured data
