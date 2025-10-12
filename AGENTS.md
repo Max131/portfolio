@@ -22,3 +22,4 @@
 - **Components**: Astro components with frontmatter for logic
 - **Content**: Use Astro content collections for structured data
 - **i18n**: Support for Spanish/English with translation utilities
+- **Thumbnails**: Format images to 480x270px, optimize for web
