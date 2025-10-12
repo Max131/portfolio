@@ -1,57 +1,76 @@
-# Diseños de proyectos
+# Proyectos creados o con soporte por parte de Nodo Professional Web
 
-ONUD DH COlombia <https://nodo-pw.slack.com/archives/C02GEK353GT/p1638325932017000s>
+## Colaboraciones como desarrollador Frontend
 
-Advanced Custom Fields Key:
-b3JkZXJfaWQ9MTAwNjExfHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0wMi0yNiAwMzo1NToyNg==
+En casi la totalidad de los proyectos, he colaborado en el desarrollo Frontend,
+optimización SEO, accesibilidad y performance, así como en la integración con CMS
+o plataformas de e-commerce.
 
-<https://abortomexico.gire.org.mx/>
-<https://artek.edu.mx/>
-<https://mexico.sae.edu/>
-<https://atlas.tryspaces.org/>
-<http://belca.mx/>
-<https://tenisterranova.com/>
-<https://www.cibanco.com/>
-<https://nukkad.app/>
-<https://dynamicbiker.com/>
-<https://serviciosecosistemicos.mx/>
-<https://www.fundacion-ica.org.mx/>
-<https://www.museofridakahlo.org.mx/>
-<https://ica.com.mx/>
-<https://insideart.com.mx/>
-<https://www.kingstonvineyards.com/>
-<https://www.mercadosporunfuturosostenible.org/>
-<https://nodo.pw/>
-<https://okila.net/>
-<https://hchr.org.mx/>
-<https://www.hchr.org.co/>
-<https://nodo.pw/paisaje-submarino/>
-<https://uncode.network/>
+- [Aborto en México, Gire](https://abortomexico.gire.org.mx/)
+- [Artek](https://artek.edu.mx/)
+- [SAE Institute México](https://mexico.sae.edu/)
+- [Atlas Transgres(s)ion](https://atlas.tryspaces.org/)
+- [Belca México](http://belca.mx/)
+- [Academia de Tenis Terranova](https://tenisterranova.com/)
+- [CIBanco](https://www.cibanco.com/)
+- [Nukkad - Defy Project](https://nukkad.app/)
+- [Dynamic Biker](https://dynamicbiker.com/)
+- [Exposición Ciudadana](https://serviciosecosistemicos.mx/)
+- [ICA](https://ica.com.mx/)
+- [Fundación ICA](https://www.fundacion-ica.org.mx/)
+- [Museo Frida Kahlo](https://www.museofridakahlo.org.mx/)
+- [InsideArt](https://insideart.com.mx/)
+- [Kingston Vineyards](https://www.kingstonvineyards.com/)
+- [Mercados por un futuro sostenible](https://www.mercadosporunfuturosostenible.org/)
+- [Nodo Professional Web](https://nodo.pw/)
+- [Okila](https://okila.net/)
+- [ONU Derechos Humanos México](https://hchr.org.mx/)
+- [ONU Derechos Humanos Colombia](https://www.hchr.org.co/)
+- [Paisaje Submarino](https://nodo.pw/paisaje-submarino/)
+- [Uncode Network](https://uncode.network/)
 
-<https://17editorial.org/>
-<https://17ensamble.org/>
-<https://17ensamble.org/>
-<https://17instituto.org/>
-<https://17radio.org/>
-<https://17criticalswitch.com/>
-<https://17impro.org/>
-<https://17mercadoflotante.com/>
-<https://17mutual.org/>
+## Proyectos a los que se les dió mantenimiento o soporte
 
-<https://breathecities.org/>
-<https://auracultura.com/>
-<https://www.bahidora.com/>
-<https://thebookofsounds.com/>
-<https://bookofsounds.mx/>
-<https://www.bowlcampeche.com.mx/>
-<https://frogtek.org/>
-<https://lec.com.mx/>
-<https://www.networth.mx/>
-<https://ptmexico.com/>
+### Proyectos del Colectivo 17
 
-<https://rader.mx/>
-<https://www.facebook.com/RaderRines/>
+En su mayoría, a estos proyectos se les dió mantenimiento de UI en lo referente
+a estructura HTML, CSS, Javascript y/o accesibilidad.
 
-<https://freogan.life/>
-<https://www.facebook.com/profile.php?id=100076212616842>
-<https://www.instagram.com/freogan.life/>
+- [17 Instituto](https://17instituto.org/)
+- [17 Editorial](https://17editorial.org/)
+- [17 Ensamble](https://17ensamble.org/)
+- [17 Radio](https://17radio.org/)
+- [17 Critical Switch](https://17criticalswitch.com/)
+- [17 Impro](https://17impro.org/)
+- [17 Mercado Flotante](https://17mercadoflotante.com/)
+- [17 Mutual](https://17mutual.org/)
+
+## Otros proyectos de soporte
+
+En estos proyectos se les dió mantenimiento, soporte o creación de secciones/componentes
+específicos en uno o más de los siguientes apartados: estructura HTML, CSS, Javascript,
+accesibilidad.
+
+- [Breathable Cities](https://breathecities.org/)
+- [Aura Cultura](https://auracultura.com/)
+- [Bahidorá](https://www.bahidora.com/)
+- [The Book Of Sounds](https://thebookofsounds.com/)
+- [The Book Of Sounds México](https://bookofsounds.mx/)
+- [Bowl Campeche](https://www.bowlcampeche.com.mx/)
+- [Frogtek](https://frogtek.org/)
+- [LEC](https://lec.com.mx/)
+- [NetWorth](https://www.networth.mx/)
+- [PTM México](https://ptmexico.com/)
+- [Barla](https://barla.com.mx/)
+
+## Otros proyectos actualmente fuera de línea
+
+Los siguientes proyectos ya no están en línea, pero se dejan aquí como referencia
+de trabajos realizados. Así como su enlace a su página de Facebook, en caso de que
+la tengan sólo como referencia.
+
+- [Rines Rader](https://rader.mx/)
+- [Rines Rader Facebook](https://www.facebook.com/RaderRines/)
+
+- [Freogan](https://freogan.life/)
+- [Freogan Facebook](https://www.facebook.com/profile.php?id=100076212616842)
