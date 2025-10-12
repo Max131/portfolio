@@ -7,7 +7,6 @@ tags: ["astro", "tailwindcss", "gsap", "countupjs"]
 thumbnail: "cibanco-informe.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "mfk"
-featured: true
 link: "https://cibinforme.netlify.app/"
 ---
 

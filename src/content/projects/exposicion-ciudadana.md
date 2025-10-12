@@ -7,7 +7,6 @@ tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "exposicion-ciudadana.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "mfk"
-featured: true
 link: "https://serviciosecosistemicos.mx/"
 ---
 
