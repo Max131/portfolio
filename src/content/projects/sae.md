@@ -1,7 +1,7 @@
 ---
 title: "SAE Institute México"
 date: "2024-11-27"
-summary: ""
+summary: "Sitio institucional de SAE Institute México, escuela enfocada en educación audiovisual y creativa; contiene programas, admisiones y noticias"
 categories: ["Education", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "sae.webp"
