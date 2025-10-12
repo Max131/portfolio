@@ -1,18 +1,17 @@
 ---
 title: "ICA"
 date: "2023-07-20"
-summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
-categories: ["Museums", "Mexico City"]
+summary: "Sitio corporativo de ICA, una de las principales empresas mexicanas en construcción e infraestructura; presenta proyectos, historia y relaciones con inversionistas."
+categories: ["Financial", "Companies"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "ica.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
-dirimages: "mfk"
+dirimages: "ica"
 featured: true
 link: "https://ica.com.mx/"
 ---
 
-El Museo Frida Kahlo, también conocido como la Casa Azul (La Casa Azul), es un
-vibrante museo ubicado en el barrio de Coyoacán en la Ciudad de México. Fue el
-lugar de nacimiento y la casa de la renombrada artista mexicana Frida Kahlo.
-El museo exhibe su vida, obra y objetos personales, ofreciendo una visión de su
-trayectoria artística y su impacto cultural.
+Empresa líder en construcción y operación de infraestructura en México, fundada
+en 1947. Con presencia en 20 países y proyectos emblemáticos como el Metro de la
+Ciudad de México. Corporativo de nivel nacional e internacional en el sector de
+ingeniería civil e infraestructura.

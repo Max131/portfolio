@@ -1,18 +1,15 @@
 ---
 title: "Fundación ICA"
 date: "2025-04-22"
-summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
-categories: ["Museums", "Mexico City"]
+summary: " Portal de la fundación empresarial, con proyectos sociales, transparencia y convocatorias."
+categories: ["Foundations", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "fica.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
-dirimages: "mfk"
+dirimages: "fica"
 featured: true
 link: "https://www.fundacion-ica.org.mx/"
 ---
 
-El Museo Frida Kahlo, también conocido como la Casa Azul (La Casa Azul), es un
-vibrante museo ubicado en el barrio de Coyoacán en la Ciudad de México. Fue el
-lugar de nacimiento y la casa de la renombrada artista mexicana Frida Kahlo.
-El museo exhibe su vida, obra y objetos personales, ofreciendo una visión de su
-trayectoria artística y su impacto cultural.
+Brazo social y cultural de ICA, dedicada a proyectos educativos, de infraestructura
+social y desarrollo comunitario. Promueve iniciativas de impacto social en México.

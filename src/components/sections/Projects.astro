@@ -7,6 +7,8 @@ import { isURL } from "@utils/index";
 
 const currentLocale = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLocale);
+
+const SHOW_MORE_PROJECTS = false;
 ---
 
 <section id="projects" class="mb-12">
@@ -51,15 +53,19 @@ const t = useTranslation(currentLocale);
         ))
     }
 
-    <article class="mb-6 rounded-xl shadow p-2 grid place-items-center">
-      <a
-        href="#!"
-        class="text-7xl font-bold text-stone-400 hover:text-stone-600 transition"
-        aria-label={t("projects.seeMore")}
-        title={t("projects.seeMore")}
-      >
-        +
-      </a>
-    </article>
+    {
+      SHOW_MORE_PROJECTS && (
+        <article class="mb-6 rounded-xl shadow p-2 grid place-items-center">
+          <a
+            href="#!"
+            class="text-7xl font-bold text-stone-400 hover:text-stone-600 transition"
+            aria-label={t("projects.seeMore")}
+            title={t("projects.seeMore")}
+          >
+            +
+          </a>
+        </article>
+      )
+    }
   </div>
 </section>
