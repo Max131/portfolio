@@ -81,5 +81,7 @@ export const ui = {
     "contact.title": "Contact",
     "contact.content":
       "<p>Do you have a project in mind or want to improve your digital presence?<br>Share your idea with me, and let's find the best way to make it a reality together.</p>",
+    "page.projects.content":
+      "<p>These are some of the projects I have collaborated on as a frontend developer. Each of them reflects my experience in interface implementation, performance optimization, usability, and backend integration.</p>",
   },
 } as const;
