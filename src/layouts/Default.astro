@@ -16,13 +16,13 @@ const jsonLdPersona = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": `${site.user}`,
-  "jobTitle": "Desarrollador Web Frontend",
-  "description": "Soy Mario, desarrollador web frontend. Diseño y construyo sitios y aplicaciones modernas, ligeras y con propósito.",
-  "url": "https://tusitio.com/",
+  "jobTitle": t("user.role"),
+  "description": t("site.description"),
+  "url": site.url,
   "image": `${site.image}`,
   "sameAs": [
-    "https://github.com/tusitio",
-    "https://www.linkedin.com/in/tusitio"
+    "https://github.com/Max131",
+    "https://www.linkedin.com/in/mario-abreu"
   ],
   "knowsAbout": [
     "Frontend",
@@ -37,12 +37,12 @@ const jsonLdPersona = {
   ],
   "brand": {
     "@type": "Organization",
-    "name": "Mario - Desarrollo Web",
-    "url": "https://tusitio.com/"
+    "name": `Mario - ${t("user.role")}`,
+    "url": site.url
   },
   "mainEntityOfPage": {
     "@type": "WebSite",
-    "url": "https://tusitio.com/"
+    "url": site.url
   }
 }
 
@@ -71,7 +71,7 @@ const jsonLdService = {
     <meta name="theme-color" content="#663399" />
     <meta name="generator" content={Astro.generator} />
     <!-- Open Graph -->
-    <meta property="og:title" content={`${t("user.role")} - ${site.user}`} />
+    <meta property="og:title" content={`${site.user} - ${t("user.role")}`} />
     <meta property="og:description" content={t("site.description")} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={site.url} />
@@ -79,8 +79,8 @@ const jsonLdService = {
     <meta property="og:locale" content={site.locale} />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={site.title} />
-    <meta name="twitter:description" content={site.description} />
+    <meta name="twitter:title" content=`${site.user} - ${t("user.role")}` />
+    <meta name="twitter:description" content={t("site.description")} />
     <meta name="twitter:image" content={site.image} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

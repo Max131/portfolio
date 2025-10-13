@@ -1,5 +1,5 @@
 import { Linkedin, type Icon as IconType } from "@lucide/astro";
-const url = "https://mabreu.netlify.app";
+const url = "https://mabreumx.com";
 
 type Contact = {
   name: string;
