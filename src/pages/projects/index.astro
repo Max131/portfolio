@@ -15,6 +15,8 @@ const projects = await getCollection("projects").then((data) =>
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   ),
 );
+
+console.log(projects[0]);
 ---
 
 <Layout title={t("projects.title")} headerTitle={t("projects.title")}>

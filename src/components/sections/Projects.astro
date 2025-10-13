@@ -4,11 +4,14 @@ import { useTranslation } from "@i18n/utils.ts";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { isURL } from "@utils/index";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 const currentLocale = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLocale);
 
-const SHOW_MORE_PROJECTS = false;
+const SHOW_MORE_PROJECTS = true;
+
+const localeURL = (getAbsoluteLocaleUrl(currentLocale));
 ---
 
 <section id="projects" class="mb-12">
@@ -62,7 +65,7 @@ const SHOW_MORE_PROJECTS = false;
       SHOW_MORE_PROJECTS && (
         <article class="mb-6 rounded-xl shadow p-2 grid place-items-center">
           <a
-            href="#!"
+            href={`${localeURL}projects`}
             class="text-7xl font-bold text-stone-400 hover:text-stone-600 transition"
             aria-label={t("projects.seeMore")}
             title={t("projects.seeMore")}
