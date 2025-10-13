@@ -1,16 +1,18 @@
 ---
 interface Props {
   title?: string;
+  headerTitle?: string;
 }
 
 import "../styles/global.css";
+import Header from "@components/Header.astro";
 import { useTranslation } from "@i18n/utils.ts";
 import { defaultLang } from "@i18n/ui.ts";
 import { site } from "@i18n/ui.ts";
 
 const currentLang = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLang);
-const { title = "" } = Astro.props;
+const { title = "", headerTitle = "" } = Astro.props;
 
 const jsonLdPersona = {
   "@context": "https://schema.org",
@@ -93,6 +95,7 @@ const jsonLdService = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdService)}></script>
   </head>
   <body class="bg-stone-50 text-stone-600 transition-colors duration-500">
+    <Header title={headerTitle} />
     <main>
       <slot />
     </main>

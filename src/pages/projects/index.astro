@@ -17,9 +17,9 @@ const projects = await getCollection("projects").then((data) =>
 );
 ---
 
-<Layout title={t("projects.title")}>
+<Layout title={t("projects.title")} headerTitle={t("projects.title")}>
   <section class="projects max-w-5xl mx-auto p-4 lg:px-0">
-    <h1>My Projects</h1>
+    <div class="text-lg my-8" set:html={t("page.projects.content")}></div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
 

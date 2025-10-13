@@ -54,6 +54,8 @@ export const ui = {
     "contact.title": "Contacto",
     "contact.content":
       "<p>¿Tienes un proyecto en mente o quieres mejorar tu presencia digital?<br>Cuéntame tu idea y busquemos juntos la mejor forma de hacerla realidad.</p>",
+    "page.projects.content":
+      "<p>Estos son algunos de los proyectos en los que he colaborado como desarrollador frontend. Cada uno de ellos refleja mi experiencia en la implementación de interfaces, optimización de rendimiento, usabilidad e integración con backend.</p>",
   },
   en: {
     "user.role": "Frontend Developer",

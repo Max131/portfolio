@@ -1,7 +1,53 @@
 ---
+interface Props {
+  title?: string;
+}
+
 import { defaultLang as defaultLocale, site } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
 
 const currentLocale = Astro.currentLocale || defaultLocale;
 const t = useTranslation(currentLocale);
+
+const { title = "" } = Astro.props;
 ---
+
+<header id="header">
+  <div class="bg-neutral-800">
+    <div class="max-w-5xl mx-auto px-4 py-6 lg:px-0">
+      <div class="md:flex justify-between items-end gap-4">
+        <h1 class="font-title font-bold">
+          <span class="text-2xl lg:text-3xl text-yellow-400">
+            {site.user}<br />
+          </span>
+          <span class="text-2xl lg:text-4xl text-cyan-400">
+            {t("user.role")}
+          </span>
+        </h1>
+        <h2 class="text-white font-bold lg:text-3xl">{title}</h2>
+        <div class="text-white font-bold min-w-fit">
+          <a
+            class="text-amber-400 hover:opacity-100"
+            class:list={[
+              {
+                "text-white pointer-events-none":
+                  currentLocale === defaultLocale,
+              },
+            ]}
+            href="/">Es</a
+          > |
+          <a
+            class="text-cyan-400 hover:opacity-100"
+            class:list={[
+              {
+                "text-white pointer-events-none":
+                  currentLocale !== defaultLocale,
+              },
+            ]}
+            href="/en">En</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
