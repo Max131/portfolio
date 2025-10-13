@@ -23,19 +23,12 @@ const SHOW_MORE_PROJECTS = false;
           );
         })
         .map((project) => (
-        <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden">
-          <a href={project.data.link} aria-label="{project.data.title}" target="_blank" rel="noopener noreferrer">
+        <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400">
+          <a class="hover:*:scale-110 focus-visible:*:scale-110 outline-0" href={project.data.link} aria-label="{project.data.title}" target="_blank" rel="noopener noreferrer">
             {
-              isURL(project.data.thumbnail)
-                ? <img
-                  class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
-                  src={project.data.thumbnail}
-                  alt={project.data.title}
-                />
-                :
             <Image
-              class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
-              src={`/images/projects/${project.data.thumbnail}`}
+              class="w-full mb-4 aspect-video object-cover transition-transform"
+              src={isURL(project.data.thumbnail)? project.data.thumbnail: `/images/projects/${project.data.thumbnail}`}
               width={480}
               height={270}
               alt={project.data.title}

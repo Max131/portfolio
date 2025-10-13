@@ -1,0 +1,7 @@
+---
+import { defaultLang as defaultLocale, site } from "@i18n/ui.ts";
+import { useTranslation } from "@i18n/utils.ts";
+
+const currentLocale = Astro.currentLocale || defaultLocale;
+const t = useTranslation(currentLocale);
+---

@@ -65,7 +65,7 @@ export const ui = {
       "web development,frontend,javascript,html,css,framewoks,svelte,react,inertia,astro,tailwindcss,alpinejs,programmer,web developer,websites,landing pages,freelance,web design,web maintenance,layout",
     "nav.home": "Home",
     "nav.about": "About",
-    "nav.projects": "",
+    "nav.projects": "Projects",
     "nav.contact": "Contact",
     "hero.content":
       "<p>Good ideas deserve a digital presence that matches their quality.</p><p>I am a <strong>frontend web developer</strong>, and I help build projects that <strong>inspire trust, communicate clearly, and grow with purpose</strong>.</p>",
