@@ -23,14 +23,25 @@ const SHOW_MORE_PROJECTS = false;
           );
         })
         .map((project) => (
-          <article class="mb-6 rounded-xl shadow p-2 flex flex-col">
+        <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden">
+          <a href={project.data.link} aria-label="{project.data.title}" target="_blank" rel="noopener noreferrer">
+            {
+              isURL(project.data.thumbnail)
+                ? <img
+                  class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
+                  src={project.data.thumbnail}
+                  alt={project.data.title}
+                />
+                :
             <Image
-              class="w-full rounded mb-4 aspect-video object-cover"
+              class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
               src={`/images/projects/${project.data.thumbnail}`}
               width={480}
               height={270}
               alt={project.data.title}
             />
+          </a>
+          <div class="p-2">
             <h3 class="font-title font-semibold text-xl mb-4">
               <a
                 class="underline underline-offset-4 decoration-4 decoration-cyan-500"
@@ -49,6 +60,7 @@ const SHOW_MORE_PROJECTS = false;
                 </li>
               ))}
             </ul>
+          </div>
           </article>
         ))
     }
