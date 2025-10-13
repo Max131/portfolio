@@ -56,10 +56,28 @@ export const ui = {
       "<p>¿Tienes un proyecto en mente o quieres mejorar tu presencia digital?<br>Cuéntame tu idea y busquemos juntos la mejor forma de hacerla realidad.</p>",
   },
   en: {
+    "user.role": "Frontend Developer",
+    "user.service": "Frontend Web Development",
+    "site.title": "Frontend Developer",
+    "site.description":
+      "I am a frontend web developer. I design and build modern, lightweight, and purpose-driven websites and applications.",
+    "site.keywords":
+      "web development,frontend,javascript,html,css,framewoks,svelte,react,inertia,astro,tailwindcss,alpinejs,programmer,web developer,websites,landing pages,freelance,web design,web maintenance,layout",
     "nav.home": "Home",
     "nav.about": "About",
-    "nav.projects": "Projects",
+    "nav.projects": "",
     "nav.contact": "Contact",
-    "user.role": "Frontend Developer",
+    "hero.content":
+      "<p>Good ideas deserve a digital presence that matches their quality.</p><p>I am a <strong>frontend web developer</strong>, and I help build projects that <strong>inspire trust, communicate clearly, and grow with purpose</strong>.</p>",
+    "projects.title": "Projects",
+    "projects.content":
+      "<p>For over five years, I have collaborated on the frontend development of websites for organizations, institutions, and companies across various sectors.</p><p>These projects reflect my experience in <strong>interface implementation, performance optimization, usability, backend integration, and collaborative work with design and development teams</strong>.</p>",
+    "projects.seeMore": "See more projects",
+    "about.title": "About me",
+    "about.content":
+      "<p>I am passionate about bringing ideas to life through code, design, and solid technical performance. Over more than five years as a frontend developer, I have collaborated on high-visibility web projects, including large-scale institutional, cultural, and financial portals.</p><p>I have contributed to the development of websites such as <strong>ICA, Museo Frida Kahlo, and CIBanco</strong>, focusing on responsive interface implementation, performance optimization, accessibility improvements, and user experience enhancements.</p><p>I work with modern technologies like <strong>Svelte, Astro, TailwindCSS, AlpineJS, and Inertia</strong>, ensuring that each solution is scalable, efficient, and aesthetically pleasing.</p><p>Each project I have collaborated on belongs to brands or organizations with their own identity and reflects my commitment to technical quality, attention to detail, and continuous improvement.</p>",
+    "contact.title": "Contact",
+    "contact.content":
+      "<p>Do you have a project in mind or want to improve your digital presence?<br>Share your idea with me, and let's find the best way to make it a reality together.</p>",
   },
 } as const;
