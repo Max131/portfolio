@@ -46,14 +46,14 @@ export const ui = {
       "<p>Las buenas ideas merecen una presencia digital a su altura.</p><p>Soy <strong>desarrollador web frontend</strong>, y ayudo a construir proyectos que <strong>inspiran confianza, comunican con claridad y crecen con propósito</strong>.",
     "projects.title": "Proyectos",
     "projects.content":
-      "<p>A lo largo de mi carrera, he tenido la oportunidad de colaborar en una variedad de proyectos que reflejan mi pasión por el desarrollo web frontend. Desde sitios web corporativos hasta aplicaciones interactivas, cada proyecto ha sido una oportunidad para aprender y crecer.</p><p>Te invito a explorar algunos de mis trabajos destacados, donde podrás ver cómo combino diseño, funcionalidad y rendimiento para crear experiencias digitales únicas.</p>",
+      "<p>Durante más de cinco años he colaborado en el desarrollo frontend de sitios web para organizaciones, instituciones y empresas de distintos sectores.</p><p>Estos proyectos reflejan mi experiencia en <strong>implementación de interfaces, optimización de rendimiento, usabilidad, integración con backend y trabajo colaborativo con equipos de diseño y desarrollo</strong>.</p>",
     "projects.seeMore": "Ver más proyectos",
     "about.title": "Sobre mí",
     "about.content":
-      "<p>Hola, soy <strong>Mario</strong>, desarrollador web frontend enfocado en crear experiencias digitales claras, funcionales y con identidad propia. Mi objetivo es transformar ideas en sitios y aplicaciones <strong>ligeras, escalables y fáciles de mantener</strong>, pensados para crecer contigo.</p><p>Trabajo con tecnologías modernas como <strong>Svelte, Inertia, Astro y AlpineJS</strong>, buscando siempre equilibrio entre <strong>estética, rendimiento y simplicidad</strong>. He colaborado con <strong>profesionales independientes, negocios locales y proyectos creativos</strong>, ayudándolos a fortalecer su presencia digital sin complicaciones técnicas innecesarias.</p><p> Creo en la cercanía, la claridad y la confianza como pilares de cada desarrollo. Más que líneas de código, construyo herramientas que cuentan historias y reflejan la esencia de quienes las imaginan.</p>",
+      "<p>Me apasiona dar vida a las ideas mediante código, diseño y buen desempeño técnico. A lo largo de más de cinco años como desarrollador frontend, he colaborado en proyectos web de alta visibilidad, entre los que se encuentran portales institucionales, culturales y financieros de gran escala.</p><p>He participado en el desarrollo de sitios como los de <strong>ICA, Museo Frida Kahlo y CIBanco</strong>, aportando en la implementación de interfaces responsivas, optimización de rendimiento, mejoras de accesibilidad y experiencia de usuario.</p><p>Trabajo con tecnologías modernas como <strong>Svelte, Astro, TailwindCSS, AlpineJS e Inertia</strong>, cuidando que cada solución sea escalable, eficiente y estética.</p><p>Cada proyecto en el que he colaborado pertenece a marcas u organizaciones con identidad propia, y refleja mi compromiso con la calidad técnica, la atención al detalle y la mejora continua.</p>",
     "contact.title": "Contacto",
     "contact.content":
-      "<p>¿Tienes un proyecto en mente o quieres mejorar tu presencia digital?</p><p>Cuéntame tu idea y busquemos juntos la mejor forma de hacerla realidad.</p>",
+      "<p>¿Tienes un proyecto en mente o quieres mejorar tu presencia digital?<br>Cuéntame tu idea y busquemos juntos la mejor forma de hacerla realidad.</p>",
   },
   en: {
     "nav.home": "Home",
