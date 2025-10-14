@@ -4,7 +4,14 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/700.css";
 @import "tailwindcss";
+
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-title: "Poppins", sans-serif;
+}
+
+@layer components {
+  h2 {
+    @apply underline decoration-4 decoration-yellow-400 font-title text-3xl mb-4;
+  }
 }

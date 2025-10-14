@@ -17,16 +17,16 @@ const { title = "", headerTitle = "" } = Astro.props;
 const jsonLdPersona = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": `${site.user}`,
-  "jobTitle": t("user.role"),
-  "description": t("site.description"),
-  "url": site.url,
-  "image": `${site.image}`,
-  "sameAs": [
+  name: `${site.user}`,
+  jobTitle: t("user.role"),
+  description: t("site.description"),
+  url: site.url,
+  image: `${site.image}`,
+  sameAs: [
     "https://github.com/Max131",
-    "https://www.linkedin.com/in/mario-abreu"
+    "https://www.linkedin.com/in/mario-abreu",
   ],
-  "knowsAbout": [
+  knowsAbout: [
     "Frontend",
     "Svelte",
     "Laravel",
@@ -35,31 +35,31 @@ const jsonLdPersona = {
     "JavaScript",
     "HTML",
     "CSS",
-    "UX"
+    "UX",
   ],
-  "brand": {
+  brand: {
     "@type": "Organization",
-    "name": `Mario - ${t("user.role")}`,
-    "url": site.url
+    name: `Mario - ${t("user.role")}`,
+    url: site.url,
   },
-  "mainEntityOfPage": {
+  mainEntityOfPage: {
     "@type": "WebSite",
-    "url": site.url
-  }
-}
+    url: site.url,
+  },
+};
 
 const jsonLdService = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": `${t("user.service")}`,
-  "provider": {
+  serviceType: `${t("user.service")}`,
+  provider: {
     "@type": "Person",
-    "name": `${site.user}`
+    name: `${site.user}`,
   },
-  "description": `${t("site.description")}`,
-  "areaServed": "Latinoamérica",
-  "url": `${site.url}`
-}
+  description: `${t("site.description")}`,
+  areaServed: "Latinoamérica",
+  url: `${site.url}`,
+};
 ---
 
 <html lang={Astro.currentLocale}>
@@ -89,10 +89,18 @@ const jsonLdService = {
     <link rel="canonical" href={site.url} />
 
     <!-- JSON-LD: Persona -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLdPersona)}> </script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLdPersona)}
+      is:inline
+    />
 
     <!-- JSON-LD: Servicio -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLdService)}></script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLdService)}
+      is:inline
+    />
   </head>
   <body class="bg-stone-50 text-stone-600 transition-colors duration-500">
     <Header title={headerTitle} />

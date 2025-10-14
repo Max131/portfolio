@@ -26,7 +26,7 @@ const localeURL = getAbsoluteLocaleUrl(currentLocale);
           );
         })
         .map((project) => (
-          <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400">
+          <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
             <a
               class="hover:*:scale-110 focus-visible:*:scale-110 outline-0"
               href={project.data.link}
@@ -71,7 +71,7 @@ const localeURL = getAbsoluteLocaleUrl(currentLocale);
     }
     {
       SHOW_MORE_PROJECTS && (
-        <article class="mb-6 rounded-xl shadow p-2 grid place-items-center">
+        <article class="mb-6 rounded-xl shadow p-2 grid place-items-center bg-white">
           <a
             href={`${localeURL}projects`}
             class="text-7xl font-bold text-stone-400 hover:text-stone-600 transition"

@@ -10,8 +10,10 @@ const t = useTranslation(currentLocale);
 
 <Layout title={t("user.role")}>
 	<section id="hero">
-		<div class="max-w-3xl mx-auto my-12 p-4 lg:px-0">
-			<div class="italic" set:html={t("hero.content")} />
+		<div
+			class="max-w-3xl mx-auto my-12 px-4 lg:px-0 border-l-4 border-cyan-400 bg-cyan-50/50"
+		>
+			<div class="italic px-4" set:html={t("hero.content")} />
 		</div>
 	</section>
 
@@ -26,12 +28,12 @@ const t = useTranslation(currentLocale);
 		<section id="contact" class="mb-12">
 			<h2 class="font-title font-bold mb-1 text-2xl">{t("contact.title")}</h2>
 			<div class="text-lg *:[p]:mb-4" set:html={t("contact.content")} />
-			<ul class="mt-4 space-y-2">
+			<ul class="mt-6">
 				{
 					contactItems.map((item) => (
 						<li>
 							<a
-								class="inline-flex gap-1 items-base text-blue-600"
+								class="inline-flex gap-1 items-base text-blue-600 underline decoration-4 underline-offset-4"
 								href={item.link}
 								target="_blank"
 								rel="noopener noreferrer"
