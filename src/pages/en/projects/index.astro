@@ -11,16 +11,12 @@ import { isURL } from "@utils/index";
 const currentLocale = Astro.currentLocale || defaultLocale;
 const t = useTranslation(currentLocale);
 
-const projects = await getCollection("projects").then((data) =>
+const projects = await getCollection("projects", (project) =>
+  project.id.startsWith(currentLocale),
+).then((data) =>
   data.sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   ),
-);
-
-console.log("***************");
-console.log({ currentLocale });
-console.log(
-  projects.filter((p) => p.id.startsWith(currentLocale)).map((p) => p.id),
 );
 ---
 
