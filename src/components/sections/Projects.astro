@@ -22,7 +22,7 @@ const projects = (
 ---
 
 <section id="projects" class="mb-12">
-  <h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
+  <h2 class="font-title font-bold mb-4 text-2xl">{t("projects.title")}</h2>
   <div
     class="text-lg *:[p]:mb-4 *:[:first-child]:text-stone-400"
     set:html={t("projects.content")}
@@ -33,10 +33,8 @@ const projects = (
         <article class="rounded-xl shadow-lg flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
           <a
             class="hover:*:scale-110 focus-visible:*:scale-110 outline-0"
-            href={project.data.link}
+            href={`/${currentLocale !== defaultLang ? currentLocale + "/" : ""}projects/${project.slug}`}
             aria-label="{project.data.title}"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <Image
               class="w-full mb-4 aspect-video object-cover transition-transform"
@@ -54,9 +52,7 @@ const projects = (
             <h3 class="font-title font-semibold text-xl mb-4">
               <a
                 class="underline underline-offset-4 decoration-4 decoration-cyan-500"
-                href={project.data.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/${currentLocale !== defaultLang ? currentLocale + "/" : ""}projects/${project.slug}`}
               >
                 {project.data.title}
               </a>
