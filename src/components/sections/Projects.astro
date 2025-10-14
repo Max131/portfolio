@@ -30,7 +30,7 @@ const projects = (
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
     {
       projects.map((project) => (
-        <article class="rounded-xl shadow flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
+        <article class="rounded-xl shadow-lg flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
           <a
             class="hover:*:scale-110 focus-visible:*:scale-110 outline-0"
             href={project.data.link}
@@ -75,7 +75,7 @@ const projects = (
     }
     {
       SHOW_MORE_PROJECTS && (
-        <article class="flex flex-col rounded-xl shadow p-2 grid place-items-center bg-white border border-dashed">
+        <article class="grid place-items-center rounded-xl shadow p-2 bg-white border border-dashed">
           <a
             href={`${localeURL}projects`}
             class="flex flex-col items-center text-stone-400 hover:text-stone-600"
