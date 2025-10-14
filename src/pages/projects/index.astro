@@ -20,44 +20,49 @@ const projects = await getCollection("projects").then((data) =>
 
 <Layout title={t("projects.title")} headerTitle={t("projects.title")}>
   <section class="projects max-w-5xl mx-auto p-4 lg:px-0">
-    <div class="text-lg my-8" set:html={t("page.projects.content")}></div>
+    <div class="text-lg my-8" set:html={t("page.projects.content")} />
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
-
-    {
+      {
         projects.map((project) => (
-        <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden">
-          <a href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`} aria-label="{project.data.title}">
-            {
-            <Image
-              class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
-              src={isURL(project.data.thumbnail)? project.data.thumbnail :`/images/projects/${project.data.thumbnail}`}
-              width={480}
-              height={270}
-              alt={project.data.title}
-            />
-          </a>
-          <div class="flex flex-col flex-1 p-2">
-            <h3 class="font-title font-semibold text-xl mb-4">
-              <a
-                class="underline underline-offset-4 decoration-4 decoration-cyan-500"
-                href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`}
-              >
-                {project.data.title}
-              </a>
-            </h3>
-            <p class="leading-tight">{project.data.summary}</p>
-            <ul class="mt-auto py-4">
-              {project.data.tags?.map((tag) => (
-                <li class="inline-block bg-stone-100 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
-                  {tag}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden">
+            <a
+              href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`}
+              aria-label="{project.data.title}"
+            >
+              <Image
+                class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
+                src={
+                  isURL(project.data.thumbnail)
+                    ? project.data.thumbnail
+                    : `/images/projects/${project.data.thumbnail}`
+                }
+                width={480}
+                height={270}
+                alt={project.data.title}
+              />
+            </a>
+            <div class="flex flex-col flex-1 p-2">
+              <h3 class="font-title font-semibold text-xl mb-4">
+                <a
+                  class="underline underline-offset-4 decoration-4 decoration-cyan-500"
+                  href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`}
+                >
+                  {project.data.title}
+                </a>
+              </h3>
+              <p class="leading-tight">{project.data.summary}</p>
+              <ul class="mt-auto py-4">
+                {project.data.tags?.map((tag) => (
+                  <li class="inline-block bg-stone-100 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </article>
         ))
-    }
+      }
     </div>
   </section>
 </Layout>
