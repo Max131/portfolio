@@ -12,8 +12,23 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const images = post.data.images || [];
 ---
 
-<Layout>
-  <Content />
+<Layout title={post.data.title}>
+  <div class="content *:[p+p]:mt-6 *:text-lg">
+    <Content />
+
+    <div class="grid grid-cols-3 gap-4 mt-8">
+      {
+        images.map((image) => (
+          <img
+            src={image}
+            alt={post.data.title}
+            class="w-full h-auto rounded"
+          />
+        ))
+      }
+    </div>
+  </div>
 </Layout>

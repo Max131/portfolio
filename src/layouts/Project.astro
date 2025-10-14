@@ -1,8 +1,13 @@
 ---
+interface Props {
+  title: string;
+}
+
 import Layout from "./Default.astro";
+const { title = "" } = Astro.props;
 ---
 
-<Layout>
+<Layout {title} headerTitle={title}>
   <div class="max-w-5xl mx-auto p-4 lg:px-0">
     <slot />
   </div>
