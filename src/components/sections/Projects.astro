@@ -17,7 +17,7 @@ const localeURL = getAbsoluteLocaleUrl(currentLocale);
 <section id="projects" class="mb-12">
   <h2 class="font-title font-bold mb-1 text-2xl">{t("projects.title")}</h2>
   <div class="text-lg *:[p]:mb-4" set:html={t("projects.content")} />
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-16">
     {
       (await getCollection("projects", ({ data: { featured } }) => featured))
         .sort((a, b) => {
