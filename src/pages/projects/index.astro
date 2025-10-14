@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 import { defaultLang as defaultLocale } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
@@ -26,18 +27,11 @@ const projects = await getCollection("projects").then((data) =>
     {
         projects.map((project) => (
         <article class="mb-6 rounded-xl shadow flex flex-col overflow-hidden">
-          <a href={project.data.link} aria-label="{project.data.title}" target="_blank" rel="noopener noreferrer">
+          <a href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`} aria-label="{project.data.title}">
             {
-              isURL(project.data.thumbnail)
-                ? <img
-                  class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
-                  src={project.data.thumbnail}
-                  alt={project.data.title}
-                />
-                :
             <Image
               class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"
-              src={`/images/projects/${project.data.thumbnail}`}
+              src={isURL(project.data.thumbnail)? project.data.thumbnail :`/images/projects/${project.data.thumbnail}`}
               width={480}
               height={270}
               alt={project.data.title}
@@ -47,9 +41,7 @@ const projects = await getCollection("projects").then((data) =>
             <h3 class="font-title font-semibold text-xl mb-4">
               <a
                 class="underline underline-offset-4 decoration-4 decoration-cyan-500"
-                href={project.data.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`}
               >
                 {project.data.title}
               </a>
