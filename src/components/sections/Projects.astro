@@ -8,10 +8,17 @@ import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 const currentLocale = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLocale);
-
 const SHOW_MORE_PROJECTS = true;
-
 const localeURL = getAbsoluteLocaleUrl(currentLocale);
+
+const projects = (
+  await getCollection(
+    "projects",
+    (project) => project.data.featured && project.id.startsWith(currentLocale),
+  )
+).sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
 ---
 
 <section id="projects" class="mb-12">
@@ -22,61 +29,49 @@ const localeURL = getAbsoluteLocaleUrl(currentLocale);
   />
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
     {
-      (
-        await getCollection(
-          "projects",
-          (project) =>
-            project.data.featured && project.id.startsWith(currentLocale),
-        )
-      )
-        .sort((a, b) => {
-          return (
-            new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-          );
-        })
-        .map((project) => (
-          <article class="rounded-xl shadow flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
-            <a
-              class="hover:*:scale-110 focus-visible:*:scale-110 outline-0"
-              href={project.data.link}
-              aria-label="{project.data.title}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                class="w-full mb-4 aspect-video object-cover transition-transform"
-                src={
-                  isURL(project.data.thumbnail)
-                    ? project.data.thumbnail
-                    : `/images/projects/${project.data.thumbnail}`
-                }
-                width={480}
-                height={270}
-                alt={project.data.title}
-              />
-            </a>
-            <div class="flex flex-col flex-1 px-6 py-2">
-              <h3 class="font-title font-semibold text-xl mb-4">
-                <a
-                  class="underline underline-offset-4 decoration-4 decoration-cyan-500"
-                  href={project.data.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.data.title}
-                </a>
-              </h3>
-              <p class="leading-tight">{project.data.summary}</p>
-              <ul class="mt-auto py-4">
-                {project.data.tags?.map((tag) => (
-                  <li class="inline-block bg-stone-100 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </article>
-        ))
+      projects.map((project) => (
+        <article class="rounded-xl shadow flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
+          <a
+            class="hover:*:scale-110 focus-visible:*:scale-110 outline-0"
+            href={project.data.link}
+            aria-label="{project.data.title}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              class="w-full mb-4 aspect-video object-cover transition-transform"
+              src={
+                isURL(project.data.thumbnail)
+                  ? project.data.thumbnail
+                  : `/images/projects/${project.data.thumbnail}`
+              }
+              width={480}
+              height={270}
+              alt={project.data.title}
+            />
+          </a>
+          <div class="flex flex-col flex-1 px-6 py-2">
+            <h3 class="font-title font-semibold text-xl mb-4">
+              <a
+                class="underline underline-offset-4 decoration-4 decoration-cyan-500"
+                href={project.data.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.data.title}
+              </a>
+            </h3>
+            <p class="leading-tight">{project.data.summary}</p>
+            <ul class="mt-auto py-4">
+              {project.data.tags?.map((tag) => (
+                <li class="inline-block bg-stone-100 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))
     }
     {
       SHOW_MORE_PROJECTS && (
