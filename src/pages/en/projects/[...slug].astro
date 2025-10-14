@@ -1,6 +1,13 @@
 ---
 import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
 import Layout from "@layouts/Project.astro";
+
+import { defaultLang as defaultLocale } from "@i18n/ui.ts";
+import { useTranslation } from "@i18n/utils.ts";
+
+const currentLocale = Astro.currentLocale || defaultLocale;
+const t = useTranslation(currentLocale);
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -13,22 +20,53 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const images = post.data.images || [];
+const IMAGES_PATH = "/images/projects/";
 ---
 
 <Layout title={post.data.title}>
-  <div class="content *:[p+p]:mt-6 *:text-lg">
-    <Content />
+  <div class="content text-lg mt-12 single">
+    <div class="md:grid grid-cols-2 gap-8">
+      <div>
+        <Content />
 
-    <div class="grid grid-cols-3 gap-4 mt-8">
-      {
-        images.map((image) => (
-          <img
-            src={image}
-            alt={post.data.title}
-            class="w-full h-auto rounded"
-          />
-        ))
-      }
+        <p class="mt-8 text-sm font-medium font-title">Tecnologías:</p>
+        <ul class="mt-auto pb-4">
+          {
+            post.data.tags?.map((tag) => (
+              <li class="inline-block bg-stone-100 text-stone-600 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                {tag}
+              </li>
+            ))
+          }
+        </ul>
+        <a
+          class="text-sm font-bold p-4 bg-cyan-500 text-white rounded-lg inline-block mt-8 focus-visible:ring-6 ring-cyan-500"
+          href={post.data.link}
+          target="_blank"
+          rel="noopener noreferrer">{t("page.single.visit")}</a
+        >
+      </div>
+
+      <div class="flex flex-col gap-8 mt-12 md:mt-0">
+        <img
+          src={`${IMAGES_PATH}${post.data.thumbnail}`}
+          alt={`${post.data.title} thumbnail`}
+          class="w-full h-auto rounded shadow-lg"
+        />
+
+        {
+          images.map((image) => (
+            <Image
+              class="w-full h-auto rounded shadow-lg object-cover"
+              src={`${IMAGES_PATH}${post.data.dirimages}/${image}`}
+              width={496}
+              height={248}
+              alt={`${t("page.single.preview")} ${post.data.title}`}
+              class="w-full h-auto rounded"
+            />
+          ))
+        }
+      </div>
     </div>
   </div>
 </Layout>

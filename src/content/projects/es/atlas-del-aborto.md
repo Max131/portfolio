@@ -27,6 +27,6 @@ impacto social.
 ## Desarrollo
 
 El princpal reto del proyecto fue la creación e integración de los diversos mapas
-interactivos. Estos fueron implementados mediante archivos SVG con interactividad
-mediante JavaScript y la librería AlpineJS. El sitio también incluye gráficos
-hechos totalmente con CSS y un toque de Javascript.
+interactivos. Estos fueron implementados mediante archivos SVG con **interactividad
+mediante JavaScript** y la librería **AlpineJS**. El sitio también incluye **gráficas
+hechos totalmente con CSS y un toque de Javascript**.
