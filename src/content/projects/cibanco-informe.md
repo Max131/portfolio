@@ -1,17 +1,18 @@
 ---
 title: "Cibanco Informe Interno"
 date: "2025-10-01"
-summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
+summary: "Informe interno anual de Cibanco"
 categories: ["Museums", "Mexico City"]
-tags: ["astro", "tailwindcss", "gsap", "countupjs"]
+tags: ["Astro", "TailwindCSS", "Multilingual"]
 thumbnail: "cibanco-informe.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
-dirimages: "mfk"
+dirimages: "cibanco-informe"
 link: "https://cibinforme.netlify.app/"
 ---
 
-El Museo Frida Kahlo, también conocido como la Casa Azul (La Casa Azul), es un
-vibrante museo ubicado en el barrio de Coyoacán en la Ciudad de México. Fue el
-lugar de nacimiento y la casa de la renombrada artista mexicana Frida Kahlo.
-El museo exhibe su vida, obra y objetos personales, ofreciendo una visión de su
-trayectoria artística y su impacto cultural.
+Institución de Banca Múltiple en México que ofrece servicios financieros digitales,
+banca móvil (CIMóvil), tarjetas de crédito y soluciones bancarias para personas y
+empresas. Plataforma digital bancaria de alto tráfico.
+
+**NOTA:** Proyecto desarrollado durante operación activa del banco. Actualmente se
+guarda una copia de la maqueta en <https://cbinforme.netlify.app>

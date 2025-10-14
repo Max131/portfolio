@@ -1,17 +1,20 @@
 ---
 title: "Artek"
 date: "2025-02-18"
-summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
+summary: "Instituto educativo mexicano especializado en tecnología, diseño y áreas creativas digitales."
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "artek.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
-dirimages: "mfk"
-link: "https://artekweb.netlify.app/"
+dirimages: "artek"
+link: "https://artek.edu.mx/"
 ---
 
-El Museo Frida Kahlo, también conocido como la Casa Azul (La Casa Azul), es un
-vibrante museo ubicado en el barrio de Coyoacán en la Ciudad de México. Fue el
-lugar de nacimiento y la casa de la renombrada artista mexicana Frida Kahlo.
-El museo exhibe su vida, obra y objetos personales, ofreciendo una visión de su
-trayectoria artística y su impacto cultural.
+Artek es una institución de educación superior dedicada a la **formación especializada
+en tecnologías digitales emergentes**. Combina la enseñanza práctica con la colaboración
+industrial para preparar profesionales capaces de **crear soluciones reales e innovadoras**.
+Su modelo educativo se basa en la **especialización, el aprendizaje personalizado
+y los proyectos aplicados**, guiado por valores de excelencia, ética e innovación.
+
+**NOTA**: El proyecto fue cambiado recientemente pero se conserva la maqueta original
+en <https://artekweb.netlify.app>.

@@ -1,17 +1,14 @@
 ---
 title: "Exposición Ciudadana"
 date: "2022-10-18"
-summary: "Explora la vida y arte de Frida Kahlo en su icónico museo en Coyoacán."
-categories: ["Museums", "Mexico City"]
+summary: "Proyecto educativo sobre servicios ecosistémicos y sostenibilidad ambiental."
+categories: ["Services", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "exposicion-ciudadana.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
-dirimages: "mfk"
+dirimages: "expo"
 link: "https://serviciosecosistemicos.mx/"
 ---
 
-El Museo Frida Kahlo, también conocido como la Casa Azul (La Casa Azul), es un
-vibrante museo ubicado en el barrio de Coyoacán en la Ciudad de México. Fue el
-lugar de nacimiento y la casa de la renombrada artista mexicana Frida Kahlo.
-El museo exhibe su vida, obra y objetos personales, ofreciendo una visión de su
-trayectoria artística y su impacto cultural.
+Plataforma educativa y de divulgación sobre servicios ecosistémicos, conservación
+ambiental y participación ciudadana.
