@@ -34,7 +34,7 @@ const projects = (
           <a
             class="hover:*:scale-110 focus-visible:*:scale-110 outline-0"
             href={`/${currentLocale !== defaultLang ? currentLocale + "/" : ""}projects/${project.slug}`}
-            aria-label="{project.data.title}"
+            aria-label={project.data.title}
           >
             <Image
               class="w-full mb-4 aspect-video object-cover transition-transform"
