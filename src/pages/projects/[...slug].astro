@@ -29,7 +29,9 @@ const IMAGES_PATH = "/images/projects/";
       <div>
         <Content />
 
-        <p class="mt-8 text-sm font-medium font-title">Tecnologías:</p>
+        <p class="mt-8 text-sm font-medium font-title">
+          {t("page.single.techs")}:
+        </p>
         <ul class="mt-auto pb-4">
           {
             post.data.tags?.map((tag) => (

@@ -58,6 +58,7 @@ export const ui = {
       "<p>Estos son algunos de los proyectos en los que he colaborado como desarrollador frontend. Cada uno de ellos refleja mi experiencia en la implementación de interfaces, optimización de rendimiento, usabilidad e integración con backend.</p>",
     "page.single.visit": "Visitar sitio",
     "page.single.preview": "Vista previa de",
+    "page.single.techs": "Tecnologías",
   },
   en: {
     "user.role": "Frontend Developer",
@@ -87,5 +88,6 @@ export const ui = {
       "<p>These are some of the projects I have collaborated on as a frontend developer. Each of them reflects my experience in interface implementation, performance optimization, usability, and backend integration.</p>",
     "page.single.visit": "Visit site",
     "page.single.preview": "Preview of",
+    "page.single.techs": "Technologies",
   },
 } as const;
