@@ -6,6 +6,7 @@ interface Props {
 
 import "../styles/global.css";
 import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 import { useTranslation } from "@i18n/utils.ts";
 import { defaultLang } from "@i18n/ui.ts";
 import { site } from "@i18n/ui.ts";
@@ -107,5 +108,6 @@ const jsonLdService = {
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
