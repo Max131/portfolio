@@ -5,7 +5,18 @@ summary: "Sitio institucional de SAE Institute México, escuela enfocada en educ
 categories: ["Education", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "sae.webp"
-images: ["https://picsum.photos/id/1011/640/480"]
+images:
+  [
+    "sae-1.webp",
+    "sae-2.webp",
+    "sae-3.webp",
+    "sae-4.webp",
+    "sae-5.webp",
+    "sae-6.webp",
+    "sae-7.webp",
+    "sae-8.webp",
+    "sae-9.webp",
+  ]
 dirimages: "sae"
 featured: true
 link: "https://mexico.sae.edu/"

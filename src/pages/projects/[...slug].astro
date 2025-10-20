@@ -53,7 +53,8 @@ const IMAGES_PATH = "/images/projects/";
         <img
           src={`${IMAGES_PATH}${post.data.thumbnail}`}
           alt={`${post.data.title} thumbnail`}
-          class="w-full h-auto rounded shadow-lg"
+          class="w-full h-auto rounded shadow-lg cursor-pointer object-cover"
+          data-lightbox
         />
 
         {
@@ -65,10 +66,54 @@ const IMAGES_PATH = "/images/projects/";
               height={248}
               alt={`${t("page.single.preview")} ${post.data.title}`}
               class="w-full h-auto rounded"
+              data-lightbox
             />
           ))
         }
       </div>
     </div>
   </div>
+  <dialog
+    id="lightbox-modal"
+    class="fixed inset-0 w-full h-dvh place-items-center bg-black/80 p-4 open:grid"
+    closedby="any"
+  >
+    <article>
+      <img
+        id="lightbox-image"
+        class="max-h-[calc(100dvh-2rem)] max-w-full rounded"
+        alt="Lightbox Image"
+      />
+    </article>
+    <button
+      id="lightbox-close"
+      class="text-5xl leading-0 absolute top-4 right-4 text-white cursor-pointer"
+      aria-label="Close Lightbox">&times;</button
+    >
+  </dialog>
+
+  <script>
+    const lightboxImages = document.querySelectorAll("[data-lightbox]");
+    const lightboxModal = document.querySelector("#lightbox-modal");
+    const lightboxImage = document.querySelector("#lightbox-image");
+    const lightboxClose = document.querySelector("#lightbox-close");
+
+    lightboxImages?.forEach((image) => {
+      image.addEventListener("click", () => {
+        lightboxImage.src = image.src;
+        lightboxModal.setAttribute("open", true);
+      });
+    });
+
+    lightboxClose?.addEventListener("click", () => {
+      lightboxModal.removeAttribute("open");
+      lightboxImage.src = "";
+    });
+  </script>
+
+  <style>
+    [data-lightbox] {
+      cursor: pointer;
+    }
+  </style>
 </Layout>
