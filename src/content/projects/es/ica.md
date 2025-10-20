@@ -5,7 +5,19 @@ summary: "Sitio corporativo de ICA, una de las principales empresas mexicanas en
 categories: ["Financial", "Companies"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "ica.webp"
-images: ["https://picsum.photos/id/1011/640/480"]
+images:
+  [
+    "ica-1.webp",
+    "ica-2.webp",
+    "ica-3.webp",
+    "ica-4.webp",
+    "ica-5.webp",
+    "ica-6.webp",
+    "ica-7.webp",
+    "ica-8.webp",
+    "ica-9.webp",
+  ]
+video: "ica.webm"
 dirimages: "ica"
 featured: true
 link: "https://ica.com.mx/"

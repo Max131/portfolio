@@ -41,6 +41,15 @@ const IMAGES_PATH = "/images/projects/";
             ))
           }
         </ul>
+        {
+          post.data.video && (
+            <video
+              class="w-full h-auto rounded shadow-lg my-4"
+              src={`${IMAGES_PATH}${post.data.dirimages}/${post.data.video}`}
+              controls
+            />
+          )
+        }
         <a
           class="text-sm font-bold p-4 bg-cyan-500 text-white rounded-lg inline-block mt-8 focus-visible:ring-6 ring-cyan-500"
           href={post.data.link}
