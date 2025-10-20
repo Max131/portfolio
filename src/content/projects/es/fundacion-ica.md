@@ -5,9 +5,21 @@ summary: " Portal de la fundación empresarial, con proyectos sociales, transpar
 categories: ["Foundations", "Mexico City"]
 tags: ["Inertia", "Svelte", "Javascript"]
 thumbnail: "fica.webp"
-images: ["https://picsum.photos/id/1011/640/480"]
+images:
+  [
+    "fica-1.webp",
+    "fica-2.webp",
+    "fica-3.webp",
+    "fica-4.webp",
+    "fica-5.webp",
+    "fica-6.webp",
+    "fica-7.webp",
+    "fica-8.webp",
+    "fica-9.webp",
+  ]
 dirimages: "fica"
 featured: true
+video: "fica.webm"
 link: "https://www.fundacion-ica.org.mx/"
 ---
 
