@@ -15,6 +15,7 @@ images:
     "atlas-6.webp",
     "atlas-7.webp",
   ]
+video: "atlas.webm"
 dirimages: "gire"
 featured: true
 link: "https://abortomexico.gire.org.mx/"

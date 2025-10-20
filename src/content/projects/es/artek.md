@@ -5,7 +5,7 @@ summary: "Instituto educativo mexicano especializado en tecnología, diseño y �
 categories: ["Museums", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "artek.webp"
-images: ["https://picsum.photos/id/1011/640/480"]
+images: ["artek-1.webp"]
 dirimages: "artek"
 link: "https://artek.edu.mx/"
 ---

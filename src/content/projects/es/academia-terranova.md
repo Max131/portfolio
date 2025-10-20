@@ -5,7 +5,7 @@ summary: "Academia deportiva especializada en formación tenística de alto rend
 categories: ["Schools", "Mexico City"]
 tags: ["Astro", "TailwindCSS", "HTML5"]
 thumbnail: "terranova.webp"
-images: ["https://picsum.photos/id/1011/640/480"]
+images: ["terranova-1.webp"]
 dirimages: "terranova"
 link: "https://tenisterranova.com/"
 ---
