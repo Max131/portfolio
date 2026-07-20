@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Default.astro";
-import { defaultLang as defaultLocale, contactItems } from "@i18n/ui.ts";
+import { defaultLang as defaultLocale, site, contactItems } from "@i18n/ui.ts";
 import { useTranslation } from "@i18n/utils.ts";
 import Projects from "@components/sections/Projects.astro";
 
@@ -9,44 +9,46 @@ const t = useTranslation(currentLocale);
 ---
 
 <Layout title={t("user.role")}>
-	<div class="max-w-5xl mx-auto p-4 lg:px-0">
-		<section id="hero">
-			<div
-				class="max-w-3xl my-12 px-4 py-2 lg:px-0 border-l-4 border-cyan-400 bg-cyan-50/50"
-			>
-				<div class="italic px-4" set:html={t("hero.content")} />
+	<div class="max-w-5xl mx-auto px-4 lg:px-0">
+		<section id="hero" class="pt-20 pb-16 lg:pt-28 lg:pb-24">
+			<h2 class="font-title font-bold text-[clamp(2.5rem,7vw,5rem)] leading-[1.05] tracking-tight text-stone-900">
+				{site.user}
+			</h2>
+			<p class="font-title text-xl lg:text-2xl text-teal-600 mt-3 font-semibold">
+				{t("user.role")}
+			</p>
+			<div class="mt-8 max-w-xl text-stone-500 leading-relaxed">
+				<p set:html={t("hero.content")} />
 			</div>
 		</section>
 
-		<div class="mt-16">
-			<Projects />
-		</div>
+		<Projects />
 
-		<section class="mb-12" id="about">
-			<h2 class="font-title font-bold mb-4 text-2xl">{t("about.title")}</h2>
-			<div class="text-lg *:[p]:mb-4" set:html={t("about.content")} />
+		<section class="py-16 animate-in" id="about">
+			<p class="text-xs font-medium uppercase tracking-widest text-stone-400 mb-3">{t("nav.about")}</p>
+			<h2 class="font-title font-bold mb-6 text-2xl">{t("about.title")}</h2>
+			<div class="text-lg leading-relaxed *:[p]:mb-4 text-stone-500" set:html={t("about.content")} />
 		</section>
 
-		<section id="contact" class="mb-12 bg-white p-6 rounded-xl shadow-lg">
-			<h2 class="font-title font-bold mb-4 text-2xl">{t("contact.title")}</h2>
+		<section id="contact" class="py-16 mb-12 border-t border-stone-200 animate-in">
+			<p class="text-xs font-medium uppercase tracking-widest text-stone-400 mb-3">{t("nav.contact")}</p>
+			<h2 class="font-title font-bold mb-6 text-2xl">{t("contact.title")}</h2>
 			<div
-				class="text-lg text-stone-500 *:[p]:mb-4"
+				class="text-lg text-stone-500 leading-relaxed *:[p]:mb-4 max-w-xl"
 				set:html={t("contact.content")}
 			/>
-			<ul class="mt-6">
+			<ul class="mt-8 flex flex-wrap gap-4">
 				{
 					contactItems.map((item) => (
 						<li>
 							<a
-								class="inline-flex gap-1 items-base px-6 py-3 rounded-lg bg-blue-400 text-white"
+								class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-stone-900 text-stone-900 text-sm font-medium transition-all duration-200 hover:bg-stone-900 hover:text-white"
 								href={item.link}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<span>
-									<item.icon />
-								</span>
-								<span class="font-medium text-xl">{item.name}</span>
+								<item.icon class="w-4 h-4" />
+								<span>{item.name}</span>
 							</a>
 						</li>
 					))

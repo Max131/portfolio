@@ -1,5 +1,5 @@
-@import "@fontsource/poppins/600.css";
-@import "@fontsource/poppins/700.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
 @import "@fontsource/inter";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/700.css";
@@ -7,10 +7,14 @@
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --font-title: "Poppins", sans-serif;
+  --font-title: "Space Grotesk", sans-serif;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   img {
     @apply max-w-full h-auto;
   }
@@ -28,4 +32,23 @@
       @apply mt-4;
     }
   }
+
+  .animate-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+
+  .animate-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
 }
