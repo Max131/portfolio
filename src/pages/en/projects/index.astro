@@ -30,7 +30,7 @@ const projects = await getCollection("projects", (project) =>
           <article class="rounded-xl shadow-lg flex flex-col overflow-hidden focus-within:ring-4 ring-yellow-400 bg-white">
             <a
               href={`${getAbsoluteLocaleUrl(Astro.currentLocale)}projects/${project.slug}`}
-              aria-label="{project.data.title}"
+              aria-label={project.data.title}
             >
               <Image
                 class="w-full mb-4 aspect-video object-cover transition-transform hover:scale-110"

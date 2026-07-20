@@ -12,18 +12,4 @@ const isURL = (url: string): boolean => {
   }
 };
 
-/**
- * Debounce a function
- * @param func
- * @param wait
- * @returns A debounced version of the function
- */
-const debounce = (func: Function, wait: number = 300) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: any[]) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-
-export { isURL, debounce };
+export { isURL };

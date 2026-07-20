@@ -8,6 +8,7 @@ thumbnail: "gire.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "gire"
 featured: true
+video: "atlas.webm"
 link: "https://abortomexico.gire.org.mx/"
 ---
 

@@ -12,7 +12,7 @@
 
 @layer base {
   img {
-    @apply max-w-full h-auto italic text-sm;
+    @apply max-w-full h-auto;
   }
 }
 

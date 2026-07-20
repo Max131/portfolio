@@ -2,7 +2,7 @@
 title: "Artek"
 date: "2025-02-18"
 summary: "Mexican educational institute specialized in technology, design and digital creative areas."
-categories: ["Museums", "Mexico City"]
+categories: ["Education", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "artek.webp"
 images: ["https://picsum.photos/id/1011/640/480"]

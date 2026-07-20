@@ -2,7 +2,7 @@
 title: "Artek"
 date: "2025-02-18"
 summary: "Instituto educativo mexicano especializado en tecnología, diseño y áreas creativas digitales."
-categories: ["Museums", "Mexico City"]
+categories: ["Education", "Mexico City"]
 tags: ["GulpJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "artek.webp"
 images: ["artek-1.webp"]

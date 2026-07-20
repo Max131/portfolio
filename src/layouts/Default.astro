@@ -8,12 +8,13 @@ import "../styles/global.css";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { useTranslation } from "@i18n/utils.ts";
-import { defaultLang } from "@i18n/ui.ts";
-import { site } from "@i18n/ui.ts";
+import { defaultLang, site } from "@i18n/ui.ts";
 
-const currentLang = Astro.currentLocale || defaultLang;
-const t = useTranslation(currentLang);
+const ogLocales = { es: "es_MX", en: "en_US" } as const;
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslation(currentLocale);
 const { title = "", headerTitle = "" } = Astro.props;
+const canonicalURL = Astro.url.href.replace(/\/$/, "");
 
 const jsonLdPersona = {
   "@context": "https://schema.org",
@@ -57,9 +58,9 @@ const jsonLdService = {
     "@type": "Person",
     name: `${site.user}`,
   },
-  description: `${t("site.description")}`,
-  areaServed: "Latinoamérica",
-  url: `${site.url}`,
+  description: t("site.description"),
+  areaServed: t("site.areaServed"),
+  url: site.url,
 };
 ---
 
@@ -77,9 +78,9 @@ const jsonLdService = {
     <meta property="og:title" content={`${site.user} - ${t("user.role")}`} />
     <meta property="og:description" content={t("site.description")} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={site.url} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={site.image} />
-    <meta property="og:locale" content={site.locale} />
+    <meta property="og:locale" content={ogLocales[currentLocale] ?? site.locale} />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content=`${site.user} - ${t("user.role")}` />
@@ -87,7 +88,7 @@ const jsonLdService = {
     <meta name="twitter:image" content={site.image} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={site.url} />
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- JSON-LD: Persona -->
     <script

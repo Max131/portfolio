@@ -1,7 +1,7 @@
 ---
 title: "Fundación ICA"
 date: "2025-04-22"
-summary: " Portal de la fundación empresarial, con proyectos sociales, transparencia y convocatorias."
+summary: "Portal de la fundación empresarial, con proyectos sociales, transparencia y convocatorias."
 categories: ["Foundations", "Mexico City"]
 tags: ["Inertia", "Svelte", "Javascript"]
 thumbnail: "fica.webp"

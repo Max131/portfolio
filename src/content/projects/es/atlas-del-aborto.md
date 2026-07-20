@@ -2,7 +2,7 @@
 title: "Atlas del Aborto, GIRE"
 date: "2025-07-08"
 summary: "Micrositio/iniciativa de GIRE sobre el estado del aborto en México; contiene recursos legales, datos y análisis."
-categories: ["Healt", "Information", "Mexico City"]
+categories: ["Health", "Information", "Mexico City"]
 tags: ["AlpineJS", "Javascript", "PostCSS", "HTML5"]
 thumbnail: "gire.webp"
 images:

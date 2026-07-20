@@ -8,6 +8,7 @@ thumbnail: "mfk.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "mfk"
 featured: true
+video: "frida.webm"
 link: "https://www.museofridakahlo.org.mx/"
 ---
 

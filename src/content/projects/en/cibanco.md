@@ -2,7 +2,7 @@
 title: "Cibanco"
 date: "2025-09-23"
 summary: "Cibanco credit card landing pages"
-categories: ["Museums", "Mexico City"]
+categories: ["Financial", "Mexico City"]
 tags: ["Astro", "TailwindCSS", "HTML5"]
 thumbnail: "cibanco.webp"
 images: ["https://picsum.photos/id/1011/640/480"]

@@ -8,6 +8,7 @@ thumbnail: "ica.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "ica"
 featured: true
+video: "ica.webm"
 link: "https://ica.com.mx/"
 ---
 

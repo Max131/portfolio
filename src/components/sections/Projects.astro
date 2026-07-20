@@ -8,7 +8,6 @@ import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 const currentLocale = Astro.currentLocale || defaultLang;
 const t = useTranslation(currentLocale);
-const SHOW_MORE_PROJECTS = true;
 const localeURL = getAbsoluteLocaleUrl(currentLocale);
 
 const projects = (
@@ -70,7 +69,7 @@ const projects = (
       ))
     }
     {
-      SHOW_MORE_PROJECTS && (
+      (
         <article class="grid place-items-center rounded-xl shadow p-2 bg-white border border-dashed">
           <a
             href={`${localeURL}projects`}

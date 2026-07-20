@@ -1,9 +1,9 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
 }
 
-import Layout from "./Default.astro";
+import Layout from "@layouts/Default.astro";
 const { title = "" } = Astro.props;
 ---
 

@@ -8,6 +8,7 @@ thumbnail: "fica.webp"
 images: ["https://picsum.photos/id/1011/640/480"]
 dirimages: "fica"
 featured: true
+video: "fica.webm"
 link: "https://www.fundacion-ica.org.mx/"
 ---
 

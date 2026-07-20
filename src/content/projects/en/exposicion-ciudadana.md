@@ -1,5 +1,5 @@
 ---
-title: "Exposición Ciudadana"
+title: "Civic Exhibition"
 date: "2022-10-18"
 summary: "Educational project on ecosystem services and environmental sustainability."
 categories: ["Services", "Mexico City"]

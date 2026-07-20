@@ -59,6 +59,7 @@ export const ui = {
     "page.single.visit": "Visitar sitio",
     "page.single.preview": "Vista previa de",
     "page.single.techs": "Tecnologías",
+    "site.areaServed": "Latinoamérica",
     "footer.copyright": "Desarrollado por Mario Abreu con Astro & TailwindCSS",
   },
   en: {
@@ -90,6 +91,7 @@ export const ui = {
     "page.single.visit": "Visit site",
     "page.single.preview": "Preview of",
     "page.single.techs": "Technologies",
+    "site.areaServed": "Latin America",
     "footer.copyright": "Developed by Mario Abreu with Astro & TailwindCSS",
   },
 } as const;

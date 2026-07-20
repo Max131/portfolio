@@ -2,7 +2,7 @@
 title: "Cibanco Informe Interno"
 date: "2025-10-01"
 summary: "Informe interno anual de Cibanco"
-categories: ["Museums", "Mexico City"]
+categories: ["Financial", "Mexico City"]
 tags: ["Astro", "TailwindCSS", "Multilingual"]
 thumbnail: "cibanco-informe.webp"
 images: ["https://picsum.photos/id/1011/640/480"]

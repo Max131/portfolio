@@ -29,24 +29,26 @@ const currentPath = Astro.url.pathname;
       <h2 class="font-bold lg:text-3xl">{title}</h2>
       <div class="font-bold min-w-fit">
         <a
-          class="text-amber-500 hover:opacity-100"
           class:list={[
+            "hover:opacity-100",
             {
               "text-stone-600 pointer-events-none":
                 currentLocale === defaultLocale,
+              "text-amber-500": currentLocale !== defaultLocale,
             },
           ]}
           href={currentPath.replace("/en/", "/")}>Es</a
         > |
         <a
-          class="text-cyan-500 hover:opacity-100"
           class:list={[
+            "hover:opacity-100",
             {
               "text-stone-600 pointer-events-none":
                 currentLocale !== defaultLocale,
+              "text-cyan-500": currentLocale === defaultLocale,
             },
           ]}
-          href=`/en${currentPath}`>En</a
+          href={currentLocale === defaultLocale ? `/en${currentPath}` : currentPath.replace("/en/", "/")}>En</a
         >
       </div>
     </div>
